@@ -2,6 +2,9 @@ package com.brunoyam.unit_1.utils;
 
 import java.util.Random;
 
+/*
+Это служебный клас который просто генерирует массивы и заполняет их данными.
+ */
 public abstract class Generator {
 
     public static int[] getOneDimensionArray() {

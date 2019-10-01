@@ -20,10 +20,14 @@ public class Main {
     Длина массива хранится в поле length. Например, длину массива myArray можно получить так: int myArrayLength = myArray.length
 
     Для выходя из метода используется ключевое слово return. Если после него стоит значение (или переменная), то это значение будет возвращено как результат работы метода.
+
+    Метод main расположен последним в классе (находится в самом низу)ю
+
      */
 
-    public static void main(String[] args) {
-        int[] oneDimensionArray = Generator.getOneDimensionArray();
+    private static int[] oneDimensionArray = Generator.getOneDimensionArray();
+
+    private static void level1() {
         /*
          Выберите подходящий тип переменных, в которые будут сохраняться значения.
          Не забудьте, что метод, вычисляющий значение переменной должен возвращать тот же тип.
@@ -33,9 +37,7 @@ public class Main {
         /*тип*/ sumOfValues = sumValues(oneDimensionArray);
         /*тип*/ firstPositiveIndex = getFirstPositiveIndex(oneDimensionArray);
         /*тип*/ firstNegativeIndex = getFirstNegativeIndex(oneDimensionArray);
-        /*тип*/ lastPositiveIndex = getLastPositiveIndex(oneDimensionArray);
-        /*тип*/ lastNegativeIndex = getLastNegativeIndex(oneDimensionArray);
-        byte[] positiveNegativeNumber = countPositiveNegative(oneDimensionArray);
+
 
         System.out.println("First part");
 
@@ -45,25 +47,33 @@ public class Main {
 
         System.out.println();
         System.out.println("length: " + oneDimensionArray.length);
-
         System.out.println("first positive index: " + firstPositiveIndex);
         System.out.println("first negative index: " + firstNegativeIndex);
+    }
 
-        //Второй вариант
+    private static void level2() {
+
+        /*
+         Выберите подходящий тип переменных, в которые будут сохраняться значения.
+         Не забудьте, что метод должен возвращать значение тогот же типа.
+        */
+        /*тип*/ lastPositiveIndex = getLastPositiveIndex(oneDimensionArray);
+        /*тип*/ lastNegativeIndex = getLastNegativeIndex(oneDimensionArray);
+        byte[] positiveNegativeNumber = countPositiveNegative(oneDimensionArray);
+
         System.out.println("last positive index: " + lastPositiveIndex);
         System.out.println("last negative index: " + lastNegativeIndex);
         System.out.println("total positives: " + positiveNegativeNumber[0]);
         System.out.println("total negatives: " + positiveNegativeNumber[1]);
+    }
 
-        //Третий вариант
+    private static void level3() {
         int[][] twoDimensionsArray = Generator.getTwoDimensionsArray();
         long[] arrayOfSums = sumSubArrays(twoDimensionsArray);
 
         System.out.println();
         System.out.println("Second part");
         System.out.println("result: " + Arrays.toString(arrayOfSums));
-
-
     }
 
     /* Укажите тип значения, которое будет возвращать метод*/
@@ -153,6 +163,12 @@ public class Main {
 
         Верните полученный массив используя ключевое слово return.
          */
+    }
+
+    public static void main(String[] args) {
+        level1();
+        level2();
+        level3();
     }
 
 }
