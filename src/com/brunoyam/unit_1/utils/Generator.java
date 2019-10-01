@@ -7,17 +7,19 @@ public abstract class Generator {
     public static int[] getOneDimensionArray() {
         Random random = new Random();
 
-        int[] oneDimensionArray = new int[random.nextInt(100)];
+        int arraySize = random.nextInt(97) + 3;
+
+        int[] oneDimensionArray = new int[arraySize];
         for(int i = 0; i < oneDimensionArray.length; i++) {
             oneDimensionArray[i] = random.nextInt();
         }
 
-        int negativePosition = random.nextInt(100);
+        int negativePosition = random.nextInt(arraySize);
         while (oneDimensionArray[negativePosition] >= 0) {
             oneDimensionArray[negativePosition] = random.nextInt();
         }
 
-        int positivePosition = random.nextInt(100);
+        int positivePosition = random.nextInt(arraySize);
         while (positivePosition == negativePosition) {
             positivePosition = random.nextInt(100);
         }
@@ -25,7 +27,7 @@ public abstract class Generator {
             oneDimensionArray[positivePosition] = random.nextInt();
         }
 
-        int zeroPozition = random.nextInt(100);
+        int zeroPozition = random.nextInt(arraySize);
         while (zeroPozition == positivePosition || zeroPozition == negativePosition) {
             zeroPozition = random.nextInt(100);
         }
@@ -37,7 +39,7 @@ public abstract class Generator {
     public static int[][] getTwoDimensionsArray() {
         Random random = new Random();
 
-        int[][] twoDimensionsArray = new int[random.nextInt(100)][random.nextInt(10)];
+        int[][] twoDimensionsArray = new int[random.nextInt(96) + 5][random.nextInt(6) + 5];
         for(int i = 0; i < twoDimensionsArray.length; i++) {
             for(int j = 0; j < twoDimensionsArray[i].length; j++) {
                 twoDimensionsArray[i][j] = random.nextInt();
