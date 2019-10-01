@@ -11,8 +11,6 @@ public class Main {
     oneDimensionArray - массив содержащий не меньше 3 и не больше 99 элементов типа int.
     Среди них всегда есть хотя бы одно положительное, хотя бы одно отрицательное и хотя бы один 0.
 
-    twoDimensionsArray - двумерный массив типа int. Представляет матрицу, содержащую не менее 5 и не более 100 столбцов, и не менее 5, но не более 10 строк.
-
     Подсказки:
 
     Для выполнения задания вспомните максимальные и минимальные значения целочисленных типов.
@@ -21,7 +19,7 @@ public class Main {
 
     Для выходя из метода используется ключевое слово return. Если после него стоит значение (или переменная), то это значение будет возвращено как результат работы метода.
 
-    Метод main расположен последним в классе (находится в самом низу)ю
+    Метод main расположен последним в классе (находится в самом низу)
 
      */
 
@@ -49,31 +47,6 @@ public class Main {
         System.out.println("length: " + oneDimensionArray.length);
         System.out.println("first positive index: " + firstPositiveIndex);
         System.out.println("first negative index: " + firstNegativeIndex);
-    }
-
-    private static void level2() {
-
-        /*
-         Выберите подходящий тип переменных, в которые будут сохраняться значения.
-         Не забудьте, что метод должен возвращать значение тогот же типа.
-        */
-        /*тип*/ lastPositiveIndex = getLastPositiveIndex(oneDimensionArray);
-        /*тип*/ lastNegativeIndex = getLastNegativeIndex(oneDimensionArray);
-        byte[] positiveNegativeNumber = countPositiveNegative(oneDimensionArray);
-
-        System.out.println("last positive index: " + lastPositiveIndex);
-        System.out.println("last negative index: " + lastNegativeIndex);
-        System.out.println("total positives: " + positiveNegativeNumber[0]);
-        System.out.println("total negatives: " + positiveNegativeNumber[1]);
-    }
-
-    private static void level3() {
-        int[][] twoDimensionsArray = Generator.getTwoDimensionsArray();
-        long[] arrayOfSums = sumSubArrays(twoDimensionsArray);
-
-        System.out.println();
-        System.out.println("Second part");
-        System.out.println("result: " + Arrays.toString(arrayOfSums));
     }
 
     /* Укажите тип значения, которое будет возвращать метод*/
@@ -120,55 +93,8 @@ public class Main {
         return firstNegativeIndex;
     }
 
-    /* Укажите тип значения, которое будет возвращать метод*/
-    private static /*тип*/ getLastPositiveIndex(int[] arrayOfValues) {
-        /*
-        Найдите последнее положительное значение в массиве.
-        Верните найденное значение используя ключевое слово return.
-         */
-    }
-
-    /* Укажите тип значения, которое будет возвращать метод*/
-    private static /*тип*/ getLastNegativeIndex(int[] arrayOfValues) {
-        /*
-        Найдите последнее отрицательное значение в массиве.
-        Верните найденное значение используя ключевое слово return.
-         */
-    }
-
-    private static byte[] countPositiveNegative(int[] arrayOfValues) {
-        byte[] result = new byte[2];
-
-        /*
-        Посчитайте количество положительных и отрицательных значений в массиве arrayOfValues.
-        Результат сохраните в массив result:
-            В первый элемент - количество положительных
-            Во второй элемент - количество отрицательных
-         */
-
-        return result;
-    }
-
-    private static long[] sumSubArrays(int[][] arrayOfValues) {
-        /*
-        Объявите массив типа long, сохраните в него результат сложения значений во всех столбцах матрицы arrayValues.
-        Например, если arrayValues:
-
-        3 1 3
-        2 4 3
-        5 4 2
-
-        То полученный массив должен содержать суммы значений для каждого столбца:
-        10 9 8
-
-        Верните полученный массив используя ключевое слово return.
-         */
-    }
-
     public static void main(String[] args) {
         level1();
-        level2();
-        level3();
     }
 
 }
