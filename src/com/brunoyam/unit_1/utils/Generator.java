@@ -39,17 +39,4 @@ public abstract class Generator {
         return oneDimensionArray;
     }
 
-    public static int[][] getTwoDimensionsArray() {
-        Random random = new Random();
-
-        int[][] twoDimensionsArray = new int[random.nextInt(96) + 5][random.nextInt(6) + 5];
-        for(int i = 0; i < twoDimensionsArray.length; i++) {
-            for(int j = 0; j < twoDimensionsArray[i].length; j++) {
-                twoDimensionsArray[i][j] = random.nextInt();
-            }
-        }
-
-        return twoDimensionsArray;
-    }
-
 }

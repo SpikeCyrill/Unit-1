@@ -67,15 +67,6 @@ public class Main {
         System.out.println("total negatives: " + positiveNegativeNumber[1]);
     }
 
-    private static void level3() {
-        int[][] twoDimensionsArray = Generator.getTwoDimensionsArray();
-        long[] arrayOfSums = sumSubArrays(twoDimensionsArray);
-
-        System.out.println();
-        System.out.println("Second part");
-        System.out.println("result: " + Arrays.toString(arrayOfSums));
-    }
-
     /* Укажите тип значения, которое будет возвращать метод*/
     private static /*тип*/ findMinValue(int[] arrayOfValues) {
         /* Укажите тип переменной */
@@ -149,26 +140,9 @@ public class Main {
         return result;
     }
 
-    private static long[] sumSubArrays(int[][] arrayOfValues) {
-        /*
-        Объявите массив типа long, сохраните в него результат сложения значений во всех столбцах матрицы arrayValues.
-        Например, если arrayValues:
-
-        3 1 3
-        2 4 3
-        5 4 2
-
-        То полученный массив должен содержать суммы значений для каждого столбца:
-        10 9 8
-
-        Верните полученный массив используя ключевое слово return.
-         */
-    }
-
     public static void main(String[] args) {
         level1();
         level2();
-        level3();
     }
 
 }
