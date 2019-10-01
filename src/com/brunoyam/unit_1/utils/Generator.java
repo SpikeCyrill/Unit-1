@@ -7,7 +7,7 @@ public abstract class Generator {
     public static int[] getOneDimensionArray() {
         Random random = new Random();
 
-        int arraySize = random.nextInt(97) + 3;
+        int arraySize = random.nextInt(98) + 3;
 
         int[] oneDimensionArray = new int[arraySize];
         for(int i = 0; i < oneDimensionArray.length; i++) {
@@ -21,7 +21,7 @@ public abstract class Generator {
 
         int positivePosition = random.nextInt(arraySize);
         while (positivePosition == negativePosition) {
-            positivePosition = random.nextInt(100);
+            positivePosition = random.nextInt(arraySize);
         }
         while (oneDimensionArray[positivePosition] <= 0) {
             oneDimensionArray[positivePosition] = random.nextInt();
@@ -29,7 +29,7 @@ public abstract class Generator {
 
         int zeroPozition = random.nextInt(arraySize);
         while (zeroPozition == positivePosition || zeroPozition == negativePosition) {
-            zeroPozition = random.nextInt(100);
+            zeroPozition = random.nextInt(arraySize);
         }
         oneDimensionArray[zeroPozition] = 0;
 
